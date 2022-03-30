@@ -3,6 +3,7 @@ package me.junsu.proxy;
 import me.junsu.proxy.config.AppConfigV1;
 import me.junsu.proxy.config.AppConfigV2;
 import me.junsu.proxy.config.v1_proxy.InterfaceProxyConfig;
+import me.junsu.proxy.config.v2_proxy.ConcreteProxyConfig;
 import me.junsu.proxy.trace.logtrace.LogTrace;
 import me.junsu.proxy.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -10,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
-@Import(InterfaceProxyConfig.class)
+@Import(ConcreteProxyConfig.class)
 @SpringBootApplication(scanBasePackages = "me.junsu.proxy.app")
 public class ProxyApplication {
 
